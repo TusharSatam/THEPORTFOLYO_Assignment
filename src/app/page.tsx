@@ -20,11 +20,6 @@ interface PortfolioData {
   testimonials: any[]; // Define the correct type for the 'testimonials' data
 }
 
-// Register fonts
-export const roboto = Roboto({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-});
 
 export const poppins = Poppins({
   subsets: ['latin'],
