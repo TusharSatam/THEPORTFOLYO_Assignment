@@ -9,6 +9,9 @@ import Services from "@/components/Services/Services";
 import Hero from "@/components/Hero/Hero";
 import Testimonials from "@/components/Testimonials/Testimonials";
 import Contact from "@/components/Contact/Contact";
+import Projects from "@/components/Projects/Projects";
+import Skills from "@/components/Skills/Skills";
+import TimeLine from "@/components/Timeline/TimeLine";
 
 // Define types for portfolio data
 interface PortfolioData {
@@ -96,11 +99,14 @@ export default function App(): JSX.Element {
   return (
     <div onMouseMove={moveCursor} className={`${roboto.className} relative flex min-h-screen w-full flex-col items-center justify-center bg-black text-white`}>
       <Navbar />
-      <div className="flex flex-col max-w-[1400px] w-full mx-auto px-4 lg:px-0">
+      <div className="flex flex-col max-w-[1400px] w-full mx-auto px-4">
         <Hero user={portfolioData} />
         <About user={portfolioData} />
         <Services user={portfolioData} />
+        <Skills user={portfolioData} />
+        <Projects user={portfolioData} />
         <Testimonials user={portfolioData} />
+        <TimeLine user={portfolioData} />
         <Contact user={portfolioData} />
       </div>
       <div className="custom-cursor" ref={cursorRef}></div>

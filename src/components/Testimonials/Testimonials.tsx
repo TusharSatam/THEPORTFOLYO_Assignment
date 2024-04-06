@@ -11,7 +11,7 @@ interface Testimonial {
 
 const Testimonials = ({ user }: { user: { testimonials: Testimonial[] } }) => {
     return (
-        <section id="testimonial" className='w-full lg:pt-[8rem] pt-[2rem] '>
+        <section id="testimonial" className='w-full pt-[5rem] '>
             <h1 className={`text-xl font-semibold lg:text-3xl text-yellow-400 ${poppins.className}`}>Testimonials</h1>
             <div className='testimonials flex flex-row w-full flex-wrap my-8'>
                 {user?.testimonials?.map((testimonial: Testimonial, index: number) => (

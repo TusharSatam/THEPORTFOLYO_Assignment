@@ -12,7 +12,7 @@ const Services = ({ user }: any) => {
   const services = user?.services
 
   return (
-    <section id="services" className=' w-full flex flex-col gap-5 pt-[8rem]'>
+    <section id="services" className=' w-full flex flex-col gap-5 pt-[5rem]'>
       <h1 className={`text-xl font-semibold lg:text-3xl text-yellow-400 ${poppins.className}`}>Services</h1>
       <h2 className='text-white underline text-lg lg:text-2xl'>What I Do</h2>
       <div className='services flex flex-wrap '>

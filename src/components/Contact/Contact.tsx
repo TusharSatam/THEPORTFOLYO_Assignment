@@ -19,7 +19,7 @@ const Contact = ({ user }: any) => {
     };
 
     return (
-        <section id="contact" className='pt-[2rem] lg:pt-[8rem] flex  flex-col  gap-8 '>
+        <section id="contact" className='pt-[5rem] flex  flex-col  gap-8 '>
             <h1 className={`text-xl font-semibold lg:text-3xl text-yellow-400 ${poppins.className}`}>Contact</h1>
             <div className='flex flex-col-reverse lg:flex-row w-full min-h-[40vh] justify-center items-center gap-1 lg:gap-[3rem] mt-[1rem] lg:mt-[4rem] mb-[3rem] lg:mb-[8rem]'>
                 <div className='form flex flex-col lg:flex-row justify-center items-center'>
