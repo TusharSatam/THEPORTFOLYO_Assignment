@@ -113,7 +113,7 @@ const Navbar: React.FC = () => {
             </div>}
             {/* Right side */}
             <div className="right-side lg:flex items-center hidden">
-                <Link href="/contact" className='bg-yellow-400 py-2 px-4 hover:bg-transparent  border-2 border-yellow-400 hover:text-white text-black font-semibold'>
+                <Link href="#contact" className='bg-yellow-400 py-2 px-4 hover:bg-transparent  border-2 border-yellow-400 hover:text-white text-black font-semibold'>
                     Contact
                 </Link>
             </div>
