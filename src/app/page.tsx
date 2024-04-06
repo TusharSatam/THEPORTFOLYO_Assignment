@@ -97,7 +97,7 @@ export default function App(): JSX.Element {
   }
 
   return (
-    <div onMouseMove={moveCursor} className={`${roboto.className} relative flex min-h-screen w-full flex-col items-center justify-center bg-black text-white`}>
+    <div onMouseMove={moveCursor} className={`${poppins.className} relative flex min-h-screen w-full flex-col items-center justify-center bg-black text-white`}>
       <Navbar />
       <div className="flex flex-col max-w-[1400px] w-full mx-auto px-4">
         <Hero user={portfolioData} />
