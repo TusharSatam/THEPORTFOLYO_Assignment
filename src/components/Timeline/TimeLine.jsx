@@ -1,13 +1,13 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
-const TimeLine = ({ user }: any) => {
-    const education = user?.timeline?.filter((ed: any) => ed?.forEducation === true && ed?.enabled);
-    const experience = user?.timeline?.filter((ex: any) => ex?.forEducation === false);
+const TimeLine = ({ user }) => {
+    const education = user?.timeline?.filter((ed) => ed?.forEducation === true && ed?.enabled);
+    const experience = user?.timeline?.filter((ex) => ex?.forEducation === false);
 
     // Refs for each education and experience entry
-    const educationRefs = useRef<Array<HTMLDivElement | null>>([]);
-    const experienceRefs = useRef<Array<HTMLDivElement | null>>([]);
+    const educationRefs = useRef([]);
+    const experienceRefs = useRef([]);
 
     useEffect(() => {
         const options = {
@@ -15,7 +15,7 @@ const TimeLine = ({ user }: any) => {
         };
 
         // Function to animate an entry when it intersects with the viewport
-        const animateEntry = (entries: IntersectionObserverEntry[], observer: IntersectionObserver) => {
+        const animateEntry = (entries, observer) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     gsap.fromTo(entry.target, { opacity: 0, y: 100 }, { opacity: 1, y: 0, duration: 0.5 });
@@ -48,7 +48,7 @@ const TimeLine = ({ user }: any) => {
     }, []);
 
     // Function to format date string to "Month Year" format
-    const formatDate = (dateString: string) => {
+    const formatDate = (dateString) => {
         const date = new Date(dateString);
         return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
     };
@@ -61,10 +61,10 @@ const TimeLine = ({ user }: any) => {
                     <h2 className='text-xl underline mb-4'>Education</h2>
                     <div className='educationWrap'>
                         {education?.length > 0 &&
-                            education?.map((ed: any, index: number) => (
+                            education?.map((ed, index) => (
                                 <div
                                     className='flex flex-col lg:flex-row px-4 w-full opacity-0 border-l-2 lg:border-l-0 border-yellow-400 mb-3 lg:mb-0'
-                                    ref={(el) => (educationRefs.current[index] = el!)}
+                                    ref={(el) => (educationRefs.current[index] = el)}
                                     key={`${ed?.company_name}${index}`}
                                 >
                                     <div className='hidden lg:flex flex-col Time lg:w-2/6 py-2'>
@@ -91,10 +91,10 @@ const TimeLine = ({ user }: any) => {
                     <h2 className='text-xl underline mb-4'>Experience</h2>
                     <div className='experienceWrap '>
                         {experience?.length > 0 &&
-                            experience?.map((ex: any, index: number) => (
+                            experience?.map((ex, index) => (
                                 <div
                                     className='flex flex-col lg:flex-row px-4 w-full opacity-0 border-l-2 lg:border-l-0 border-yellow-400 mb-3 lg:mb-0'
-                                    ref={(el) => (experienceRefs.current[index] = el!)}
+                                    ref={(el) => (experienceRefs.current[index] = el)}
                                     key={`${ex?.company_name}${index}`}
                                 >
                                     <div className='hidden lg:flex flex-col Time lg:w-2/6 py-2'>
