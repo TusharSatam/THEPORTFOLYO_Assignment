@@ -1,4 +1,3 @@
-import { poppins } from '@/app/page'
 import Image from 'next/image'
 import React from 'react'
 import { FaGithub } from "react-icons/fa";
@@ -7,7 +6,7 @@ const Projects = ({ user }: any) => {
     const  projects  = user?.projects.sort((a: any, b: any) => a.sequence - b.sequence).filter((e:any)=>e?.enabled);;
     return (
         <section id="projects" className='flex flex-col w-full pt-[5rem] gap-8'>
-            <h1 className={`text-xl font-semibold lg:text-3xl text-yellow-400 ${poppins.className}`}>Projects</h1>
+            <h1 className={`text-xl font-semibold lg:text-3xl text-yellow-400 `}>Projects</h1>
             <h2 className='text-white underline text-lg lg:text-2xl'>Featured Projects</h2>
             <div className=' flex justify-center items-center flex-wrap projects mx-auto lg:w-[90%] gap-4'>
                 {projects && projects?.map((project: any, index: number) => (

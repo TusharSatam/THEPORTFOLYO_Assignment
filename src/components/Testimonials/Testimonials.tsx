@@ -1,4 +1,3 @@
-import { poppins } from '@/app/page';
 import Image from 'next/image';
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
@@ -52,7 +51,7 @@ const Testimonials = ({ user }: { user: { testimonials: Testimonial[] } }) => {
 
     return (
         <section id="testimonial" className='w-full pt-[5rem] '>
-            <h1 className={`text-xl font-semibold lg:text-3xl text-yellow-400 ${poppins.className}`}>Testimonials</h1>
+            <h1 className={`text-xl font-semibold lg:text-3xl text-yellow-400 `}>Testimonials</h1>
             <div ref={testimonialsRef} className='testimonials flex flex-row w-full flex-wrap my-8 justify-center lg:gap-4'>
                 {user?.testimonials?.filter((e:any)=>e?.enabled).map((testimonial: Testimonial, index: number) => (
                     <div key={index} className='testimonial relative p-3 py-6 lg:w-[580px] flex gap-2 my-4 shadow-md  border boxSd rounded-2xl opacity-0'>

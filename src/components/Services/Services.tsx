@@ -3,7 +3,6 @@ import { MdAppSettingsAlt } from "react-icons/md";
 import { CgWebsite } from "react-icons/cg";
 import { LuFigma } from "react-icons/lu";
 import { SiHomeassistantcommunitystore } from "react-icons/si";
-import { poppins } from '@/app/page';
 import gsap from 'gsap';
 
 interface Service {
@@ -47,7 +46,7 @@ const Services = ({ user }: any) => {
 
   return (
     <section id="services" className='w-full flex flex-col gap-5 pt-[5rem]'>
-      <h1 className={`text-xl font-semibold lg:text-3xl text-yellow-400 ${poppins.className}`}>Services</h1>
+      <h1 className={`text-xl font-semibold lg:text-3xl text-yellow-400 `}>Services</h1>
       <h2 className='text-white underline text-lg lg:text-2xl'>What I Do</h2>
       <div ref={servicesRef} className='services flex flex-wrap'>
         {services?.map((service: Service, index: number) => (

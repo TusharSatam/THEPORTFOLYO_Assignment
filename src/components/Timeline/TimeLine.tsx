@@ -1,4 +1,3 @@
-import { poppins } from '@/app/page';
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
@@ -56,7 +55,7 @@ const TimeLine = ({ user }: any) => {
 
     return (
         <section id="timeline" className='flex flex-col w-full pt-[5rem] gap-8'>
-            <h1 className={`text-xl font-semibold lg:text-3xl text-yellow-400 ${poppins.className}`}>Timeline</h1>
+            <h1 className={`text-xl font-semibold lg:text-3xl text-yellow-400 `}>Timeline</h1>
             <div className='container flex flex-col lg:flex-row'>
                 <div className='education w-full lg:w-1/2'>
                     <h2 className='text-xl underline mb-4'>Education</h2>

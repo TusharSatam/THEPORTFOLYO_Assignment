@@ -1,5 +1,4 @@
 "use client"
-import { Poppins, Roboto } from "next/font/google";
 import { useEffect, useRef, useState } from "react";
 import axios from 'axios';
 import gsap from 'gsap';
@@ -20,12 +19,6 @@ interface PortfolioData {
   testimonials: any[]; // Define the correct type for the 'testimonials' data
 }
 
-
-export const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  preload: false,
-});
 
 export default function App(): JSX.Element {
   const [portfolioData, setPortfolioData] = useState<PortfolioData | null>(null);
@@ -93,7 +86,7 @@ export default function App(): JSX.Element {
   }
 
   return (
-    <div onMouseMove={moveCursor} className={`${poppins.className} relative flex min-h-screen w-full flex-col items-center justify-center bg-black text-white`}>
+    <div onMouseMove={moveCursor} className={` relative flex min-h-screen w-full flex-col items-center justify-center bg-black text-white`}>
       <Navbar />
       <div className="flex flex-col max-w-[1400px] w-full mx-auto px-4">
         <Hero user={portfolioData} />

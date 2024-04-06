@@ -2,7 +2,6 @@ import Image from 'next/image'
 import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import { poppins } from '@/app/page';
 gsap.registerPlugin(ScrollTrigger);
 const About = ({ user }: any) => {
     const aboutRef = useRef(null);
@@ -54,7 +53,7 @@ const About = ({ user }: any) => {
             </div>
             <div className='flex flex-col lg:flex-row justify-center items-center w-full lg:w-1/2 h-full aboutMe opacity-0'>
                 <div className='flex flex-col gap-3'>
-                    <h1 className={`text-xl font-semibold lg:text-3xl text-yellow-400 ${poppins.className}`}>About Me</h1>
+                    <h1 className={`text-xl font-semibold lg:text-3xl text-yellow-400 `}>About Me</h1>
                     <h3 className='text-lg lg:text-2xl'>{user?.about?.subTitle}</h3>
                     <p className='text-gray-400'>{user?.about?.description}</p>
                     <div className='flex flex-wrap '>

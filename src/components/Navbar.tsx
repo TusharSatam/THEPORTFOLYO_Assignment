@@ -1,5 +1,4 @@
 "use client"
-import { poppins } from '@/app/page';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -26,7 +25,7 @@ const Navbar: React.FC = () => {
         };
     }, []);
     return (
-        <nav className={`${poppins.className} navbar fixed top-0 z-50 flex items-center justify-between w-full py-4 px-[2rem] lg:px-[6rem] ${scrolling ? 'bg-[#808080b9]' : 'bg-black'} text-white transition-colors duration-300`}>
+        <nav className={` navbar fixed top-0 z-50 flex items-center justify-between w-full py-4 px-[2rem] lg:px-[6rem] ${scrolling ? 'bg-[#808080b9]' : 'bg-black'} text-white transition-colors duration-300`}>
             {/* Left side */}
             <div className="left-side flex items-center">
                 <span className="text-2xl font-bold">JOHN</span>

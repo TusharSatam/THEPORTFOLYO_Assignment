@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react';
 import styles from "./Hero.module.css";
 import Image from 'next/image';
 import { gsap } from 'gsap';
-import { poppins } from '@/app/page';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 const Hero = ({ user }: any) => {
@@ -38,13 +37,13 @@ const Hero = ({ user }: any) => {
 
     if (!user || !user.about) {
         return (
-            <section id="hero" className={`h-[90vh] flex justify-center items-center w-full ${styles.container} ${poppins.className}`}>
+            <section id="hero" className={`h-[90vh] flex justify-center items-center w-full ${styles.container} `}>
             </section>
         );
     }
 
     return (
-        <section id="hero" ref={heroRef} className={`h-[100vh] lg:[90vh] flex flex-col md:flex-row gap-3 md:gap-0 justify-center items-center w-full ${styles.container} ${poppins.className} heroSection overflow-hidden`}>
+        <section id="hero" ref={heroRef} className={`h-[100vh] lg:[90vh] flex flex-col md:flex-row gap-3 md:gap-0 justify-center items-center w-full ${styles.container} heroSection overflow-hidden`}>
 
             <div className='hidden md:flex h-full w-1/2 aboutText justify-center items-center  text-left'>
                 <div className='flex flex-col gap-2'>

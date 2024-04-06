@@ -1,5 +1,4 @@
 import { useEffect, useRef } from 'react';
-import { poppins } from '@/app/page';
 import gsap from 'gsap';
 
 const Skills = ({ user }: any) => {
@@ -38,7 +37,7 @@ const Skills = ({ user }: any) => {
 
   return (
     <section id="skills" className='flex flex-col w-full pt-[5rem] gap-8'>
-      <h1 className={`text-xl font-semibold lg:text-3xl text-yellow-400 ${poppins.className}`}>Skills</h1>
+      <h1 className={`text-xl font-semibold lg:text-3xl text-yellow-400 `}>Skills</h1>
       <div ref={skillsRef} className='flex justify-center items-center flex-wrap w-full gap-6'>
         {skills && skills.map((skill: any, index: number) => (
           <div key={`${skill?.name}${index}`} className='skillContainer flex flex-col w-[250px] gap-2 opacity'>
