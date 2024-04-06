@@ -7,31 +7,28 @@ gsap.registerPlugin(ScrollTrigger);
 const About = ({ user }: any) => {
     const aboutRef = useRef(null);
     useEffect(() => {
-        if (!user || !user.about) return; // Check if user or user.about is not available
+        if (!user || !user.about) return; 
         const aboutSection = aboutRef.current;
         const t1 = gsap.timeline({ defaults: { duration: 1.5, ease: 'power3.out' } });
         t1.fromTo(".aboutImage", { opacity: 0, x: 200, y: -200, rotateY: -90 }, { opacity: 1, x: 0, y: 0, rotateY: 0 });
-        // Define the timeline for the animation
         const t2 = gsap.timeline({ defaults: { duration: 1.5, ease: 'power3.out' } });
         t2.fromTo(".aboutMe", { opacity: 0, x: 100 }, { opacity: 1, x: 0 });
 
-        // Create a ScrollTrigger to trigger the animation when the about section enters the viewport
         ScrollTrigger.create({
             trigger: aboutSection,
-            start:  window.innerWidth <= 768 ? "-=300px top" : "-=300px top", // Start animation when top of aboutSection reaches bottom of viewport
-            end: "bottom top", // End animation when bottom of aboutSection leaves top of viewport
-            animation: t1, // Use the defined timeline for animation
-            toggleActions: "play none none none", // Play animation when entering the viewport, do nothing when leaving
-            once: true // Only play animation once
+            start:  window.innerWidth <= 768 ? "-=300px top" : "-=300px top",
+            end: "bottom top", 
+            animation: t1, 
+            toggleActions: "play none none none",
+            once: true, 
         });
-        // Create a ScrollTrigger to trigger the animation when the about section enters the viewport
         ScrollTrigger.create({
             trigger: aboutSection,
-            start:  window.innerWidth <= 768 ? "-=200px top" : "-=300px top",  // Start animation when top of aboutSection reaches bottom of viewport
-            end: "bottom top", // End animation when bottom of aboutSection leaves top of viewport
-            animation: t2, // Use the defined timeline for animation
-            toggleActions: "play none none none", // Play animation when entering the viewport, do nothing when leaving
-            once: true // Only play animation once
+            start:  window.innerWidth <= 768 ? "-=200px top" : "-=300px top", 
+            end: "bottom top", 
+            animation: t2, 
+            toggleActions: "play none none none", 
+            once: true, 
         });
         ScrollTrigger.create({
             trigger: aboutSection,

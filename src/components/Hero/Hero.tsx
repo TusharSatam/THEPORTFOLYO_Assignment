@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Hero = ({ user }: any) => {
     const heroRef = useRef(null);
     useEffect(() => {
-        if (!user || !user.about) return; // Check if user or user.about is not available
+        if (!user || !user.about) return; 
 
         const tl = gsap.timeline({ defaults: { duration: 1, ease: 'power3.out' } });
         const t2 = gsap.timeline({ defaults: { duration: 1.5, ease: 'power3.out' } });
@@ -34,10 +34,9 @@ const Hero = ({ user }: any) => {
             }
         });
 
-    }, [user]); // Add user as a dependency for useEffect
+    }, [user]); 
 
     if (!user || !user.about) {
-        // Render loading state or placeholder content if user or user.about is not available
         return (
             <section id="hero" className={`h-[90vh] flex justify-center items-center w-full ${styles.container} ${poppins.className}`}>
             </section>
@@ -49,14 +48,14 @@ const Hero = ({ user }: any) => {
 
             <div className='hidden md:flex h-full w-1/2 aboutText justify-center items-center  text-left'>
                 <div className='flex flex-col gap-2'>
-                    <h2 className='text-xl nameRef opacity-0'>Hi, I'm <span className='text-yellow-400'>{user.about.name}</span></h2>
+                    <h2 className='text-xl nameRef opacity-0'>{"Hi, I'm"} <span className='text-yellow-400'>{user.about.name}</span></h2>
                     <h1 className='text-5xl font-semibold titleRef opacity-0'>{user.about.title}</h1>
                     <p className='text-gray-400 subTitleRef opacity-0'>{user.about.subTitle}</p>
                 </div>
             </div>
             <div className=' relative md:h-full w-full md:w-1/2 Image flex flex-col md:flex-row justify-center items-center perspective-1000'>
                 <Image priority src={user.about.avatar?.url} alt="ProfileImage" width={400} height={300} className=' border-yellow-400 border-2 rounded-full md:rounded-lg ProfileImage opacity-0 transform rotateY-90 h-[400px] w-[300px] lg:w-[400px] lg:h-[500px]' />
-                <h2 className='flex md:hidden absolute bottom-[80px] text-xl nameRef opacity-0'>Hi, I'm &nbsp; <span className='text-yellow-400'>{user.about.name}</span></h2>
+                <h2 className='flex md:hidden absolute bottom-[80px] text-xl nameRef opacity-0'>{"Hi, I'm"} &nbsp; <span className='text-yellow-400'>{user.about.name}</span></h2>
             </div>
             <div className='aboutText text-center flex  flex-col md:hidden '>
                 <h1 className='text-2xl font-semibold titleRef opacity-0 text-white '>{user.about.title}</h1>
