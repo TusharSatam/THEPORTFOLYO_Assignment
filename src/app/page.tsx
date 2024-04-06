@@ -105,8 +105,8 @@ export default function App(): JSX.Element {
         <Services user={portfolioData} />
         <Skills user={portfolioData} />
         <Projects user={portfolioData} />
-        <Testimonials user={portfolioData} />
         <TimeLine user={portfolioData} />
+        <Testimonials user={portfolioData} />
         <Contact user={portfolioData} />
       </div>
       <div className="custom-cursor" ref={cursorRef}></div>

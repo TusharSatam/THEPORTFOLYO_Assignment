@@ -76,7 +76,7 @@ const Navbar: React.FC = () => {
             {isMoboNavOpen && <div className=" absolute top-[60px]  left-0  w-full bg-gray-400 center flex flex-col  items-center justify-center lg:hidden py-3 transition-all duration-500">
                 <ul className="flex  flex-col h-full w-full text-center justify-center items-center gap-3">
                     <li>
-                        <Link className="hover:text-yellow-500" href="#home">
+                        <Link className="hover:text-yellow-500" href="/">
                             Home
                         </Link>
                     </li>
@@ -107,7 +107,7 @@ const Navbar: React.FC = () => {
                     </li>
                     <li>
                         <Link className="hover:text-yellow-500" href="#testimonial">
-                            Testimonial
+                            Testimonials
                         </Link>
                     </li>
                 </ul>

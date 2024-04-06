@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
 const TimeLine = ({ user }: any) => {
-    const education = user?.timeline?.filter((ed: any) => ed?.forEducation === true);
+    const education = user?.timeline?.filter((ed: any) => ed?.forEducation === true && ed?.enabled);
     const experience = user?.timeline?.filter((ex: any) => ex?.forEducation === false);
 
     // Refs for each education and experience entry

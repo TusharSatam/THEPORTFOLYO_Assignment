@@ -4,7 +4,7 @@ import React from 'react'
 import { FaGithub } from "react-icons/fa";
 
 const Projects = ({ user }: any) => {
-    const { projects } = user
+    const  projects  = user?.projects.sort((a: any, b: any) => a.sequence - b.sequence).filter((e:any)=>e?.enabled);;
     return (
         <section id="projects" className='flex flex-col w-full pt-[5rem] gap-8'>
             <h1 className={`text-xl font-semibold lg:text-3xl text-yellow-400 ${poppins.className}`}>Projects</h1>
@@ -16,7 +16,7 @@ const Projects = ({ user }: any) => {
                             <div className='absolute left-0 top-0 bg-[#2c2a2a75] h-full w-full hidden group-hover:flex z-10 justify-center items-center'>
                                 <a href={project?.githuburl} className='border border-yellow-400 px-4 py-2 flex gap-2 items-center font-semibold text-black bg-yellow-400'>View Code <FaGithub /></a>
                             </div>
-                            <Image src={project?.image?.url} alt={project.title} width={300} height={300} className='w-full h-[200px] group-hover:scale-110 transition-transform' />
+                            <Image priority src={project?.image?.url} alt={project.title} width={300} height={300} className='w-full h-[200px] group-hover:scale-110 transition-transform' />
                         </div>
                         <div className='p-3'>
                             <h3 className='text-yellow-400'>{project?.title}</h3>

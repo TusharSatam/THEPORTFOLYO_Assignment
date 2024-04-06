@@ -55,7 +55,7 @@ const Hero = ({ user }: any) => {
                 </div>
             </div>
             <div className=' relative md:h-full w-full md:w-1/2 Image flex flex-col md:flex-row justify-center items-center perspective-1000'>
-                <Image src={user.about.avatar?.url} alt="ProfileImage" width={400} height={300} className=' border-yellow-400 border-2 rounded-full md:rounded-lg ProfileImage opacity-0 transform rotateY-90 h-[400px] w-[300px] lg:w-[400px] lg:h-[500px]' />
+                <Image priority src={user.about.avatar?.url} alt="ProfileImage" width={400} height={300} className=' border-yellow-400 border-2 rounded-full md:rounded-lg ProfileImage opacity-0 transform rotateY-90 h-[400px] w-[300px] lg:w-[400px] lg:h-[500px]' />
                 <h2 className='flex md:hidden absolute bottom-[80px] text-xl nameRef opacity-0'>Hi, I'm &nbsp; <span className='text-yellow-400'>{user.about.name}</span></h2>
             </div>
             <div className='aboutText text-center flex  flex-col md:hidden '>

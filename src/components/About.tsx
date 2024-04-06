@@ -53,7 +53,7 @@ const About = ({ user }: any) => {
     return (
         <section id="about" ref={aboutRef} className='lg:h-screen w-full pt-[5rem]  aboutSection flex text-left overflow-hidden flex-col lg:flex-row gap-6 lg:gap-0'>
             <div className='flex justify-center items-center w-full lg:w-1/2 h-full aboutImage'>
-                <Image src={user?.about.avatar?.url} alt="ProfileImage" width={400} height={300} className='border-yellow-400 border-2 rounded-lg ProfileImage opacity-0 transform rotateY-90 h-[400px] w-[300px] lg:w-[400px] lg:h-[500px]' />
+                <Image priority src={user?.about.avatar?.url} alt="ProfileImage" width={400} height={300} className='border-yellow-400 border-2 rounded-lg ProfileImage opacity-0 transform rotateY-90 h-[400px] w-[300px] lg:w-[400px] lg:h-[500px]' />
             </div>
             <div className='flex flex-col lg:flex-row justify-center items-center w-full lg:w-1/2 h-full aboutMe opacity-0'>
                 <div className='flex flex-col gap-3'>

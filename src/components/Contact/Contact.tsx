@@ -3,6 +3,9 @@ import React, { useRef } from 'react'
 import { MdPhoneInTalk } from "react-icons/md";
 import { MdOutlineEmail } from "react-icons/md";
 import { FaRegAddressCard } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa6";
+import { RiInstagramFill } from "react-icons/ri";
 import gsap from 'gsap';
 
 const Contact = ({ user }: any) => {
@@ -22,7 +25,7 @@ const Contact = ({ user }: any) => {
         <section id="contact" className='pt-[5rem] flex  flex-col  gap-8 '>
             <h1 className={`text-xl font-semibold lg:text-3xl text-yellow-400 ${poppins.className}`}>Contact</h1>
             <div className='flex flex-col-reverse lg:flex-row w-full min-h-[40vh] justify-center items-center gap-1 lg:gap-[3rem] mt-[1rem] lg:mt-[4rem] mb-[3rem] lg:mb-[8rem]'>
-                <div className='form flex flex-col lg:flex-row justify-center items-center'>
+                <div className='form flex flex-col  justify-center items-center gap-8'>
                     <form>
                         <div className='flex gap-3 my-4 flex-col lg:flex-row'>
                             <div className='flex flex-col gap-3'>
@@ -33,7 +36,14 @@ const Contact = ({ user }: any) => {
                             <textarea placeholder='Message' className='bg-transparent resize-none border-2 w-[300px] p-2' />
                         </div>
                         <button className='bg-yellow-400 py-2 px-4 hover:bg-transparent hover:border-2 border-yellow-400 hover:text-white text-black font-semibold'>Send Message</button>
+
                     </form>
+                    <div className='socialMedia flex gap-4 text-white text-[24px] '>
+                        <a href="#" className='border p-3 border-spacing-2 rounded-full border-transparent hover:border-yellow-400'><FaLinkedinIn /></a>
+                        <a href="#" className='border p-3 border-spacing-2 rounded-full border-transparent hover:border-yellow-400'><FaFacebookF /></a>
+                        <a href="#" className='border p-3 border-spacing-2 rounded-full border-transparent hover:border-yellow-400'><RiInstagramFill /></a>
+
+                    </div>
                 </div>
                 <div className='info flex flex-row flex-wrap lg:flex-nowrap lg:flex-col justify-center gap-3 '>
                     <div className='bg-gray-400 h-[100px] lg:h-[130px] min-w-[220px] lg:min-w-[300px] px-3 lg:px-6 flex justify-center items-center flex-col text-lg gap-3'
