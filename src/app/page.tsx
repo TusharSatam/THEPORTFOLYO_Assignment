@@ -24,6 +24,7 @@ interface PortfolioData {
 export const poppins = Poppins({
   subsets: ['latin'],
   weight: ['400', '700'],
+  preload: false,
 });
 
 export default function App(): JSX.Element {
